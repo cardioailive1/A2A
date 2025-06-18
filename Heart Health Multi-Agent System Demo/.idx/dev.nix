@@ -25,6 +25,16 @@
           command = [ "./devserver.sh" ];
           env = { PORT = "$PORT"; };
           manager = "web";
+# Your Google Cloud Project ID where Vertex AI is enabled.
+    # This is essential for the Vertex AI SDK to authenticate and find resources.
+    GCP_PROJECT_ID = "ai-powered-cardiology"; # <-- **REPLACE WITH YOUR PROJECT ID**
+
+    # The Google Cloud region where your Vertex AI resources are located (e.g., "us-central1").
+    # This is also needed for the SDK.
+    GCP_REGION = "us-central1, us-east5,us-east4"; # <-- **REPLACE WITH YOUR REGION**
+
+ # Default port for the application
+ PORT = "8080";
         };
       };
     };
